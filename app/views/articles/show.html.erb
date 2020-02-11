@@ -4,11 +4,16 @@
     <a href="/articles/<%= @article.id %>/edit">
       <i class="fas fa-pencil-alt"></i>
     </a>
-    <a href="/articles/<%= @article.id %>">
-      <i class="fas fa-trash-alt"></i>
-    </a>
+    <i class="fas fa-trash-alt">
+      <% link_to <i class="fas fa-trash-alt"></i>, article_path(@article),
+        method: :delete,
+        data: { confirm: "Are you sure?" } %>
+    </i>
   </div>
   <div class="article-body">
     <p><%= @article.content %></p>
+  </div>
+  <div class="back-link">
+    <%= link_to "Back to articles", articles_path %>
   </div>
 </div>

@@ -1,1 +1,10 @@
-edit.html.erb
+<div class="form-container">
+  <h1>Edit article</h1>
+  <%= render 'form', article: @article %>
+  <div class="back-link">
+    <%= link_to "Back to article", article_path(@article) %>
+  </div>
+  <div class="back-link">
+    <%= link_to "Back to articles list", articles_path %>
+  </div>
+</div>
