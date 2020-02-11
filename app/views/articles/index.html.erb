@@ -1,0 +1,12 @@
+<div class="index-container">
+  <% @articles.each do |article| %>
+    <div class="index-article">
+      <h1>
+        <a href="/articles/<%= article.id %>">
+          <%= article.title %>
+        </a>
+      </h1>
+      <p><%= article.content %></p>
+    </div>
+  <% end %>
+</div>
